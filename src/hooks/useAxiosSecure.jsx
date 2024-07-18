@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProviders';
 
 export const axiosSecure=axios.create({
-     baseURL:`http://localhost:9000`
+     baseURL:`https://ab-mart-ecom-server-side.vercel.app`
 })
 const useAxiosSecure = () => {
   const navigate=useNavigate();

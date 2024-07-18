@@ -43,12 +43,12 @@ export const routers=createBrowserRouter([
             {
                 path:'/shops/:id',
                 element:<ShopDetails></ShopDetails>,
-                loader:({params})=>fetch(`http://localhost:9000/products/${params.id}`),
+                loader:({params})=>fetch(`https://ab-mart-ecom-server-side.vercel.app/products/${params.id}`),
                 children:[
                     {
                         path:'productInfo',
                         element:<PrductInfo></PrductInfo>,
-                        loader:({params})=>fetch(`http://localhost:9000/products/${params.id}`),
+                        loader:({params})=>fetch(`https://ab-mart-ecom-server-side.vercel.app/products/${params.id}`),
                     },
                     {
                         path:'wServices',
@@ -57,7 +57,7 @@ export const routers=createBrowserRouter([
                     {
                         path:'review',
                         element:<Reviews></Reviews>,
-                        loader:({params})=>fetch(`http://localhost:9000/products/${params.id}`)
+                        loader:({params})=>fetch(`https://ab-mart-ecom-server-side.vercel.app/products/${params.id}`)
                     }
                 ]
             },
@@ -123,7 +123,7 @@ export const routers=createBrowserRouter([
         {
             path:'updateItems/:id',
             element:<AdminRoute><UpdateItems></UpdateItems></AdminRoute>,
-            loader:({params})=>fetch(`http://localhost:9000/products/${params.id}`)
+            loader:({params})=>fetch(`https://ab-mart-ecom-server-side.vercel.app/products/${params.id}`)
         },
         {
             path:'paymentsHistory',
