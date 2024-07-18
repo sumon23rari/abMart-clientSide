@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "reviewName": "John Doe",
+      "reviewDesignation": "Software Engineer",
+      "reviewDescription": "The product is highly effective and meets all my expectations. I would definitely recommend it to others.",
+      "reviewImage":"https://i.ibb.co/xGD9kMm/tm3.jpg"
+    },
+    {
+      "id": 2,
+      "reviewName": "Jane Smith",
+      "reviewDesignation": "Product Manager",
+      "reviewDescription": "Overall, a solid product with some minor issues. Customer support was very helpful in resolving my problems.",
+      "reviewImage" :"https://i.ibb.co/2ydHQQ5/team1.png"
+    },
+    {
+      "id": 3,
+      "reviewName": "Alice Johnson",
+      "reviewDesignation": "UX Designer",
+      "reviewDescription": "The design is user-friendly and intuitive. However, there is room for improvement in terms of speed and performance.",
+      "reviewImage":"https://i.ibb.co/xGD9kMm/tm3.jpg"
+    },
+    {
+      "id": 4,
+      "reviewName": "Bob Brown",
+      "reviewDesignation": "Data Scientist",
+      "reviewDescription": "Great features and functionality. The data visualization tools are particularly useful for my work.",
+      "reviewImage" :"https://i.ibb.co/2ydHQQ5/team1.png"
+    }
+  ]
+  

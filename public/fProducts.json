@@ -1,0 +1,87 @@
+[
+    {
+      "product_id": "101",
+      "product_name": "lether bages",
+      "product_image": "https://i.ibb.co/4F88QGt/bags.png",
+      "product_price": 160,
+      "product_deal":180
+    },
+    {
+      "product_id": "102",
+      "product_name": "mens shoes",
+      "product_image": "https://i.ibb.co/SBttrK5/shoes.png",
+      "product_price": 160,
+      "product_deal":180
+    },
+    {
+      "product_id": "103",
+      "product_name": "nokia smartphone",
+      "product_image": "https://i.ibb.co/kHCZLfw/smartphone.png",
+      "product_price": 160,
+      "product_deal":180
+    },
+    {
+      "product_id": "104",
+      "product_name": "smart watch",
+      "product_image": "  https://i.ibb.co/4Yr1MP6/watch.png",
+      "product_price": 160,
+      "product_deal":180
+    },
+    {
+        "product_id": "101",
+        "product_name": "lether bages",
+        "product_image": "https://i.ibb.co/4F88QGt/bags.png",
+        "product_price": 160,
+        "product_deal":180
+      },
+      {
+        "product_id": "102",
+        "product_name": "mens shoes",
+        "product_image": "https://i.ibb.co/SBttrK5/shoes.png",
+        "product_price": 160,
+        "product_deal":180
+      },
+      {
+        "product_id": "103",
+        "product_name": "nokia smartphone",
+        "product_image": "https://i.ibb.co/kHCZLfw/smartphone.png",
+        "product_price": 160,
+        "product_deal":180
+      },
+      {
+        "product_id": "104",
+        "product_name": "smart watch",
+        "product_image": "  https://i.ibb.co/4Yr1MP6/watch.png",
+        "product_price": 160,
+        "product_deal":180
+      },
+      {
+        "product_id": "101",
+        "product_name": "lether bages",
+        "product_image": "https://i.ibb.co/4F88QGt/bags.png",
+        "product_price": 160,
+        "product_deal":180
+      },
+      {
+        "product_id": "102",
+        "product_name": "mens shoes",
+        "product_image": "https://i.ibb.co/SBttrK5/shoes.png",
+        "product_price": 160,
+        "product_deal":180
+      },
+      {
+        "product_id": "103",
+        "product_name": "nokia smartphone",
+        "product_image": "https://i.ibb.co/kHCZLfw/smartphone.png",
+        "product_price": 160,
+        "product_deal":180
+      },
+      {
+        "product_id": "104",
+        "product_name": "smart watch",
+        "product_image": "  https://i.ibb.co/4Yr1MP6/watch.png",
+        "product_price": 160,
+        "product_deal":180
+      }
+  ]
+  

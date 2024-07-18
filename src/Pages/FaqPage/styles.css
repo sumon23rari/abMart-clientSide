@@ -1,0 +1,29 @@
+/* .slick-initialized .slick-slide{
+    margin: 20px !important;
+    width: 400px !important;
+} */
+.faPlusIcon{
+ 
+    padding: 10px;
+    color: #fff;
+    background-color: #039D55;
+    font-weight: 700;
+}
+.faMinus{
+    display: none;
+}
+.collapse:not(.collapse-close):has(> input[type="radio"]:checked) .faPlusIcon{
+display: none;
+width: 60px;
+height: 60px;
+color: #fff;
+background-color: #039D55;
+font-weight: 700;
+}
+.collapse:not(.collapse-close):has(> input[type="radio"]:checked) .faMinus{
+    display: block;
+    padding: 10px;
+    color: #fff;
+    background-color: #039D55;
+    font-weight: 700;
+}

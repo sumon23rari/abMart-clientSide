@@ -1,0 +1,322 @@
+[
+    {
+        "productName": "Smartphone XL",
+        "productPrice": 799.99,
+        "productCategory": "Electronics",
+        "productBrandName": "TechBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/kHCZLfw/smartphone.png"
+    },
+    {
+        "productName": "Laptop Pro",
+        "productPrice": 1299.99,
+        "productCategory": "Computers",
+        "productBrandName": "TechBrand",
+        "productQuntity":3,"productColor": "Silver",
+        "productImage": "https://i.ibb.co/cr5dGQv/hp5.jpg"
+    },
+    {
+        "productName": "Wireless Earbuds",
+        "productPrice": 199.99,
+        "productCategory": "Accessories",
+        "productBrandName": "SoundBrand",
+        "productQuntity":3,"productColor": "White",
+        "productImage": "https://i.ibb.co/jz47nQ9/ar4.jpg"
+    },
+    {
+        "productName": "Smartwatch",
+        "productPrice": 249.99,
+        "productCategory": "Wearables",
+        "productBrandName": "WatchBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/4Yr1MP6/watch.png"
+    },
+    {
+        "productName": "Bluetooth Speaker",
+        "productPrice": 99.99,
+       "productCategory": "Accessories",
+        "productBrandName": "SoundBrand",
+        "productQuntity":3,"productColor": "Blue",
+        "productImage": "https://i.ibb.co/Vwjqn96/download-1.jpg"
+    },
+    {
+        "productName": "4K TV",
+        "productPrice": 899.99,
+          "productCategory": "Home Appliances",
+        "productBrandName": "TechBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/6nTwZHv/samsung-monitor.jpg"
+    },
+    {
+        "productName": "Gaming Console",
+        "productPrice": 499.99,
+        "productCategory": "Electronics",
+        "productBrandName": "TechBrand",
+        "productQuntity":3,"productColor": "White",
+        "productImage": "https://i.ibb.co/zJvgy3D/service22.jpg"
+    },
+    {
+        "productName": "Digital Camera",
+        "productPrice": 699.99,
+        "productCategory": "Cameras",
+        "productBrandName": "PhotoBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/vkz9vh1/tm2.jpg"
+    },
+    {
+        "productName": "Fitness Tracker",
+        "productPrice": 149.99,
+        "productCategory": "Personal Care",
+      "productBrandName": "PhotoBrand",
+        "productQuntity":3,"productColor": "Red",
+        "productImage": "https://i.ibb.co/4Yr1MP6/watch.png"
+    },
+    {
+        "productName": "Electric Toothbrush",
+        "productPrice": 79.99,
+        "productCategory": "Personal Care",
+        "productBrandName": "HealthBrand",
+        "productQuntity":3,"productColor": "White",
+        "productImage": "https://i.ibb.co/3h3j9FY/download.jpg"
+    },
+    {
+        "productName": "Robot Vacuum",
+        "productPrice": 499.99,
+        "productCategory": "Home Appliances",
+         "productBrandName": "HealthBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/jMqLssz/robot-Vaccum.jpg"
+    },
+    {
+        "productName": "Air Purifier",
+        "productPrice": 199.99,
+        "productCategory": "Home Appliances",
+        "productBrandName": "HealthBrand",
+        "productQuntity":3,"productColor": "White",
+        "productImage": "https://i.ibb.co/cDn7LzS/air-Purple.jpg"
+    },
+    {
+        "productName": "Coffee Maker",
+        "productPrice": 89.99,
+        "productCategory": "Kitchen Appliances",
+        "productBrandName": "HealthBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/n0TKVKJ/coffee-Maker.jpg"
+    },
+    {
+        "productName": "Smart Light Bulb",
+        "productPrice": 29.99,
+        "productCategory": "Home Appliances",
+        "productBrandName": "WatchBrand",
+        "productQuntity":3,"productColor": "Gray",
+        "productImage": "https://i.ibb.co/Vwjqn96/download-1.jpg"
+    },
+    {
+        "productName": "Wireless Charger",
+        "productPrice": 49.99,
+        "productCategory": "Accessories",
+        "productBrandName": "HealthBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/Vwjqn96/download-1.jpg"
+    },
+    {
+        "productName": "Noise Cancelling Headphones",
+        "productPrice": 299.99,
+       "productCategory": "Accessories",
+        "productBrandName": "SoundBrand",
+        "productQuntity":3,"productColor": "Gray",
+         "productImage": "https://i.ibb.co/jMqLssz/robot-Vaccum.jpg"
+    },
+    {
+        "productName": "E-Reader",
+        "productPrice": 129.99,
+        "productCategory": "Electronics",
+        "productBrandName": "HealthBrand",
+        "productQuntity":3,"productColor": "Black",
+          "productImage": "https://i.ibb.co/Vwjqn96/download-1.jpg"
+    },
+    {
+        "productName": "Smart Thermostat",
+        "productPrice": 199.99,
+        "productCategory": "Home Appliances",
+       "productBrandName": "PhotoBrand",
+        "productQuntity":3,"productColor": "White",
+        "productImage": "https://i.ibb.co/n0TKVKJ/coffee-Maker.jpg"
+    },
+    {
+        "productName": "Electric Kettle",
+        "productPrice": 59.99,
+        "productCategory": "Kitchen Appliances",
+        "productBrandName": "PhotoBrand",
+        "productQuntity":3,"productColor": "Gray",
+        "productImage": "https://i.ibb.co/n0TKVKJ/coffee-Maker.jpg"
+    },
+    {
+        "productName": "Portable Power Bank",
+        "productPrice": 39.99,
+        "productCategory": "Accessories",
+        "productBrandName": "SecureBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/6nTwZHv/samsung-monitor.jpg"
+    },
+    {
+        "productName": "Smart Door Lock",
+        "productPrice": 179.99,
+        "productCategory": "Home Appliances",
+        "productBrandName": "SecureBrand",
+        "productQuntity":3,"productColor": "Silver",
+        "productImage": "https://i.ibb.co/4Yr1MP6/watch.png"
+    },
+    {
+        "productName": "Action Camera",
+        "productPrice": 299.99,
+        "productCategory": "Cameras",
+        "productBrandName": "GroomBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/jz47nQ9/ar4.jpg"
+    },
+    {
+        "productName": "Streaming Device",
+        "productPrice": 49.99,
+          "productCategory": "Home Appliances",
+          "productBrandName": "SecureBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/jMqLssz/robot-Vaccum.jpg"
+    },
+    {
+        "productName": "Smart Plug",
+        "productPrice": 24.99,
+        "productCategory": "Home Appliances",
+        "productBrandName": "SecureBrand",
+         "productQuntity":3,"productColor": "White",
+        "productImage": "https://i.ibb.co/Vwjqn96/download-1.jpg"
+    },
+    {
+        "productName": "Electric Shaver",
+        "productPrice": 99.99,
+        "productCategory": "Personal Care",
+        "productBrandName": "GroomBrand",
+        "productQuntity":3,"productColor": "Blue",
+        "productImage": "https://i.ibb.co/3h3j9FY/download.jpg"
+    },
+    {
+        "productName": "VR Headset",
+        "productPrice": 399.99,
+        "productCategory": "Electronics",
+        "productBrandName": "GroomBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/6nTwZHv/samsung-monitor.jpg"
+    },
+    {
+        "productName": "Smart Refrigerator",
+        "productPrice": 1999.99,
+        "productCategory": "Kitchen Appliances",
+       "productBrandName": "SecureBrand",
+        "productQuntity":3,"productColor": "Gray",
+        "productImage": "https://i.ibb.co/cDn7LzS/air-Purple.jpg"
+    },
+    {
+        "productName": "Electric Scooter",
+        "productPrice": 499.99,
+        "productCategory": "Home Appliances",
+        "productBrandName": "GroomBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage":  "https://i.ibb.co/n0TKVKJ/coffee-Maker.jpg"
+    },
+    {
+        "productName": "Digital Photo Frame",
+        "productPrice": 149.99,
+        "productCategory": "Personal Care",
+      "productBrandName": "GroomBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/4Yr1MP6/watch.png"
+    },
+    {
+        "productName": "Smart Alarm Clock",
+        "productPrice": 79.99,
+        "productCategory": "Home Appliances",
+      "productBrandName": "FlyBrand",
+        "productQuntity":3,"productColor": "White",
+        "productImage": "https://i.ibb.co/jz47nQ9/ar4.jpg" 
+    },
+    {
+        "productName": "Drone",
+        "productPrice": 699.99,
+        "productCategory": "Cameras",
+        "productBrandName": "FlyBrand",
+        "productQuntity":3,"productColor": "Gray",
+        "productImage": "https://i.ibb.co/6nTwZHv/samsung-monitor.jpg"
+    },
+    {
+        "productName": "Smart Water Bottle",
+        "productPrice": 49.99,
+        "productCategory": "Accessories",
+        "productBrandName": "FlyBrand",
+        "productQuntity":3,"productColor": "Blue",
+        "productImage": "https://i.ibb.co/Vwjqn96/download-1.jpg"
+    },
+    {
+        "productName": "Electric Blanket",
+        "productPrice": 79.99,
+        "productCategory": "Home Appliances",
+        "productBrandName": "FlyBrand",
+        "productQuntity":3,"productColor": "Gray",
+        "productImage": "https://i.ibb.co/jz47nQ9/ar4.jpg"
+    },
+    {
+        "productName": "Wireless Mouse",
+        "productPrice": 29.99,
+        "productCategory": "Computers",
+        "productBrandName": "FlyBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/kHCZLfw/smartphone.png"
+    },
+    {
+        "productName": "Mechanical Keyboard",
+        "productPrice": 89.99,
+        "productCategory": "Computers",
+        "productBrandName": "GroomBrand",
+        "productQuntity":3,"productColor": "White",
+        "productImage": "https://i.ibb.co/cr5dGQv/hp5.jpg"
+    },
+    {
+        "productName": "Electric Grill",
+        "productPrice": 149.99,
+        "productCategory": "Kitchen Appliances",
+        "productBrandName": "GroomBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage":  "https://i.ibb.co/3h3j9FY/download.jpg"
+    },
+    {
+        "productName": "Home Security Camera",
+        "productPrice": 99.99,
+        "productCategory": "Home Appliances",
+        "productBrandName": "SecureBrand",
+        "productQuntity":3,"productColor": "White",
+        "productImage": "image37.jpg"
+    },
+    {
+        "productName": "Smart Scale",
+        "productPrice": 59.99,
+        "productCategory": "Personal Care",
+        "productBrandName": "HealthBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/vkz9vh1/tm2.jpg"
+    },
+    {
+        "productName": "Electric Pressure Cooker",
+        "productPrice": 99.99,
+        "productCategory": "Kitchen Appliances",
+        "productBrandName": "SecureBrand",
+        "productQuntity":3,"productColor": "Silver",
+        "productImage": "https://i.ibb.co/jMqLssz/robot-Vaccum.jpg"
+    },
+    {
+        "productName":"Electric motor",
+        "productPrice": 999.99,
+      "productCategory": "Electronics",
+      "productBrandName": "SecureBrand",
+        "productQuntity":3,"productColor": "Black",
+        "productImage": "https://i.ibb.co/zJvgy3D/service22.jpg"
+    }
+]
