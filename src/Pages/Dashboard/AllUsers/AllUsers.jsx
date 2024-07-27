@@ -4,6 +4,7 @@ import { FaTrash, FaUserEdit } from 'react-icons/fa';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
+import { Helmet } from 'react-helmet-async';
 
 const AllUsers = () => {
 const axiosSecure=useAxiosSecure();
@@ -81,6 +82,11 @@ const handleDelete=(uId)=>{
   
     return (
         <div>
+          <Helmet>
+            <title>
+              AllUsers
+            </title>
+          </Helmet>
           <SectionTitle subHeading={"users info"} heading={"showing all users "}></SectionTitle>
             <div className='rounded drop-shadow-lg p-8 m-10 bg-white min-h-screen'>
                 <h3 className='font-bold text-xl uppercase'>total user: {users.length}</h3>

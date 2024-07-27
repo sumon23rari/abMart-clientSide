@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
+import './index.css';
+
 import { RouterProvider } from 'react-router-dom'
 import { routers } from './Routers/Routers.jsx'
 import AuthProviders from './providers/AuthProviders.jsx'
@@ -12,10 +13,13 @@ const queryClient = new QueryClient()
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
+
     <AuthProviders>
    
       <HelmetProvider>
-<RouterProvider router={routers}></RouterProvider>
+<RouterProvider router={routers}>
+
+</RouterProvider>
 </HelmetProvider>
 
 </AuthProviders>

@@ -6,6 +6,7 @@ import { FaBook, FaDollarSign, FaUsers } from 'react-icons/fa';
 import { VscListUnordered } from "react-icons/vsc";
 
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid,PieChart, Pie, Tooltip, Legend } from 'recharts';
+import { Helmet } from 'react-helmet-async';
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 // custom shape for the bar chart
 const getPath = (x, y, width, height) => {
@@ -67,6 +68,9 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 
     return (
         <div className='m-6'>
+          <Helmet>
+            <title>adminHome</title>
+          </Helmet>
            <h3 className='text-3xl lg:my-4 my-2'>
             <span>Hi, WellCome</span>
             {

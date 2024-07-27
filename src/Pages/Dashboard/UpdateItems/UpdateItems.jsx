@@ -7,6 +7,7 @@ import useUnicProductCategory from '../../../hooks/useUnicProductCategory';
 import useAxiosPublic from '../../../hooks/useAxiosPublic';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 const image_hosting_key=import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api=`https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 const UpdateItems = () => {
@@ -67,6 +68,9 @@ const UpdateItems = () => {
   };
     return (
         <div>
+          <Helmet>
+            <title>updateItems||abMart</title>
+          </Helmet>
             <SectionTitle subHeading={'update an items'} heading={"update now"}></SectionTitle>
             <div className='rounded drop-shadow-lg  p-8 m-10 bg-[#E8E8E8] min-h-screen'>
             <form className="card-body" onSubmit={handleSubmit(onSubmit)}>

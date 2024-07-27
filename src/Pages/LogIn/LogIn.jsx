@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../providers/AuthProviders';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 const LogIn = () => {
   const {logInUser,handleGoogleSignIn}=useContext(AuthContext);
@@ -59,6 +60,9 @@ const LogIn = () => {
   }
     return (
         <div>
+          <Helmet>
+            <title>logIn || abMart</title>
+          </Helmet>
             <BradCumb title={"logIn"}></BradCumb>
             <div className="py-[60px] bg-[#fff]">
   <div className="hero-content ">

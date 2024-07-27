@@ -11,6 +11,7 @@ import { FaStore } from "react-icons/fa";
 import useProductCategory from '../../hooks/useProductCategory';
 import { AuthContext } from '../../providers/AuthProviders';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
+import { Helmet } from 'react-helmet-async';
 
 const ShopDetails = () => {
     const {user}=useContext(AuthContext);
@@ -96,7 +97,9 @@ setProductNumber(productNumber+1)
     }
     return (
         <div className='my-[60px]'>
-            
+            <Helmet>
+              <title>ShopDetails</title>
+            </Helmet>
             <div className='grid grid-cols-3 gap-4'>
                 <div>
                     <img src={productImage} alt='productimage' className='w-full'/>

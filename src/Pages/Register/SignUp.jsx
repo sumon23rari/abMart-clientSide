@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import Swal from 'sweetalert2';
 import useAxiosPublic from '../../hooks/useAxiosPublic';
+import { Helmet } from 'react-helmet-async';
 
 const SignUp = () => {
   const {handleGoogleSignIn,createUser,profileUpdate}=useContext(AuthContext);
@@ -133,6 +134,9 @@ const onSubmit=(data)=>{
 }
     return (
         <div>
+          <Helmet>
+            <title>register||abMart</title>
+          </Helmet>
             <BradCumb title={'register'}></BradCumb>
             <div className="py-[60px] bg-[#fff]">
   <div className="hero-content ">
