@@ -3,10 +3,12 @@ import React, { useEffect, useState } from 'react';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import useCart from '../../../hooks/useCart';
 import useAuth from '../../../hooks/useAuth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useBuyProducts from '../../../hooks/useBuyProducts';
 
-const CheckOutForm = () => {
+const CheckOutForm = (params) => {
+  console.log(params,'params')
     const stripe=useStripe();
     const elements=useElements();
     const axiosSecure=useAxiosSecure();
@@ -15,22 +17,33 @@ const CheckOutForm = () => {
     const [cart,refetch]=useCart();
     const {user}=useAuth();
     const navigate=useNavigate();
+    const prevPath=params?.prevPath;
+    console.log(prevPath,'dfsfs')
+    let cartIds;
+    let productIds;
+ 
+  const [buyProducts]=useBuyProducts();
+    
+  const totalBuyPrice=buyProducts.reduce((previewsValue,currentValue)=>{
+      return previewsValue+currentValue.productPrice;
+  },0);
+ 
     const [error,setError]=useState('');
     console.log('cart',cart)
     const totalPrice=cart.reduce((previewsValue,currentValue)=>{
         return previewsValue+currentValue.productPrice
     },0);
     useEffect(()=>{
-      if (totalPrice>0) {
-        axiosSecure.post('/create-payment-intent',{price:totalPrice})
+      if (totalPrice>0||totalBuyPrice>0) {
+        axiosSecure.post('/create-payment-intent',{price:totalPrice || totalBuyPrice})
         .then((res)=>{
     
           setClientSecret(res?.data?.clientSecret)
         })
       }
     
-    },[axiosSecure,totalPrice])
-    console.log('clientSecret',clientSecret)
+    },[axiosSecure,totalPrice,totalBuyPrice])
+    console.log('clientSecret',clientSecret,totalPrice,totalBuyPrice)
     const handleSubmit=async(e)=>{
         e.preventDefault();
         if (!stripe || !elements) {
@@ -68,16 +81,28 @@ const CheckOutForm = () => {
           console.log('paymentIntentError',paymentIntent)
           if (paymentIntent.status==='succeeded') {
             console.log('transction id',paymentIntent.id)
-            setTransectionId(paymentIntent.id)
+            setTransectionId(paymentIntent.id);
             // now save payment on the database
+        
+            if (buyProducts.length>0) {
+              cartIds=buyProducts?.map((item)=>item._id),
+              console.log('cartIds',cartIds)
+              productIds=buyProducts.map((item)=>item.productId)
+            }
+         else{
+       
+            cartIds=cart?.map((item)=>item._id),
+            productIds=cart?.map((item)=>item.productId)
+        
+         }
             const paymentInfo={
               email:user?.email,
               name:user?.displayName,
               price:totalPrice,
               transectionId:paymentIntent.id,
               date:new Date(),//convert utc time
-              cartIds:cart.map((item)=>item._id),
-              productIds:cart.map((item)=>item.productId),
+              cartIds:cartIds,
+              productIds:productIds,
               status:'pending'
             };
             const res=await axiosSecure.post('/payments',paymentInfo)

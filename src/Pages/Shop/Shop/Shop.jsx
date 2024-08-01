@@ -51,7 +51,6 @@ setSelectedItem(e.target.value)
   },[currentPage,itemPerPage])
 
 
-
 const handleItemsPerPage=(e)=>{
 const displayItem=parseInt(e.target.value);
 console.log('displayItem',displayItem)
@@ -127,7 +126,7 @@ const handleNextPage=()=>{
                 <div className=' shopSideBottom text-center'>
                     <h3 className='pt-[100px]'></h3>
                     <h3 className=' text-center text-[#38464F] font-semibold relative top-[-82px]'>Discount price</h3>
-                    <h3 className='pt-[80px] text-white font-semibold text-3xl'>winter sale</h3>
+                    <h3 className='pt-[30px] text-white font-semibold text-3xl'>winter sale</h3>
                     <button className='btn text-center mt-[30px] mb-[60px] bg-[#696969] font-bold text-white capitilize text-xl border-0'>shop now</button>
                 </div>
                 </div>

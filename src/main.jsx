@@ -8,6 +8,7 @@ import { routers } from './Routers/Routers.jsx'
 import AuthProviders from './providers/AuthProviders.jsx'
 import { HelmetProvider } from 'react-helmet-async'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import ScrollButton from './components/ScrollButton/ScrollButton.jsx';
 // Create a client
 const queryClient = new QueryClient()
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <AuthProviders>
    
       <HelmetProvider>
+        <ScrollButton></ScrollButton>
 <RouterProvider router={routers}>
 
 </RouterProvider>

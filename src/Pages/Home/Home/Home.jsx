@@ -8,10 +8,12 @@ import ServiceInfo from '../../../components/ServiceInfo/ServiceInfo';
 
 
 
+
 const Home = () => {
 
     return (
         <div className='mt-4'>
+            
 <Banner></Banner>
 <FSales></FSales>
 <Categories></Categories>

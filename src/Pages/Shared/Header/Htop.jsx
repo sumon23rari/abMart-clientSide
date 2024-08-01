@@ -9,9 +9,10 @@ import useAdmin from '../../../hooks/useAdmin';
 const Htop = () => {
   const [open,setOpen]=useState(false);
   const [openItem,setOpenItem]=useState(false);
-  const menuRef=useRef();
-  const buttonRef=useRef();
+  const menuRef=useRef(null);
+  const buttonRef=useRef(null);
   const imageMenuRef=useRef();
+  console.log('imageMenuRef',imageMenuRef)
   const navButtonRef=useRef();
   const {user}=useAuth();
   const [isAdmin]=useAdmin()
@@ -64,8 +65,8 @@ const Htop = () => {
 <div className="dropdown">
   <div className="btn m-1" onClick={()=>setOpenItem(!openItem)} ref={navButtonRef}><img src={bang} className='w-[25px] h-[20px]' alt='bangladesh'/> <span className='hover:text-orange-500'>bangla</span></div>
  {
- openItem &&  <ul ref={imageMenuRef} className=" w-full shadow bg-black z-50 rounded-box  drpCont">
-  <li onClick={()=>setOpenItem(false)} className='text-white p-2 cursor-pointer flex justify-around'><img src={bang} className='w-[25px] h-[20px]' alt='bangladesh'/> <span className='hover:text-orange-500'>bangla</span></li>
+ openItem &&  <ul className=" w-full shadow bg-black z-50 rounded-box  drpCont">
+  <li onClick={()=>setOpenItem(false)} ref={imageMenuRef}  className='text-white p-2 cursor-pointer flex justify-around'><img src={bang} className='w-[25px] h-[20px]' alt='bangladesh'/> <span className='hover:text-orange-500'>bangla</span></li>
   <li onClick={()=>setOpenItem(false)} className='text-white p-2 cursor-pointer flex justify-around '> <img src={usa} className='w-[25px] h-[20px]' alt="usa"/> <span className='hover:text-orange-500'>usa</span></li>
 
 </ul>

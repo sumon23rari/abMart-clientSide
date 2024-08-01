@@ -30,7 +30,7 @@ const Header = () => {
     return (
         <>
         <Htop></Htop>
-        <div className="navbar bg-[#039D55]">
+        <div className="navbar bg-[#039D55] sticky top-0 z-30">
         <div className="navbar-start lg:w-auto">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -42,12 +42,12 @@ const Header = () => {
               <li><a>Item 3</a></li>
             </ul>
           </div>
-          <img src={logo} alt='logo'/> <span className='font-bold text-white text-xl ml-2'>AB Mart   </span> <span className='font-bold text-white text-xl ml-2 cursor-pointer btn  border-0 hover:bg-transparent' onClick={()=>setNavOpen(!navOpen)} ref={hButtonRef}><FaBars/></span>
+          <img src={logo} alt='logo'/> <span className='font-bold text-white text-xl ml-2'>AB Mart   </span> <span className='font-bold text-white text-xl ml-2 cursor-pointer btn bg-transparent border-0 hover:bg-transparent' onClick={()=>setNavOpen(!navOpen)} ref={hButtonRef}><FaBars/></span>
         
         
         </div>
         {
-            navOpen && <div ref={itemsRef} className='px-[1px] bg-white absolute top-[25%] z-[20] shadow-xl' >
+            navOpen && <div ref={itemsRef} className='px-[1px] bg-white absolute top-[100%] z-50 shadow-xl' >
                 <ul className='capitalize px-3 py-4 text-lg' >
                     <li className='p-2 py-4 hover:text-sky-700 ease-linear cursor-pointer text-xl text-black-500 flex items-center gap-3 font-bold'><FaFemale></FaFemale> <span>woman's fashon</span></li>
                     <li className='p-2 py-4 hover:text-sky-700 ease-linear cursor-pointer text-xl text-black-500 flex items-center gap-3 font-bold'><FaUser/><span>men's fashon</span></li>

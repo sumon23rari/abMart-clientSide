@@ -25,6 +25,8 @@ import Payment from "../Pages/Dashboard/Payement/Payment";
 import PaymentsHistory from "../Pages/Dashboard/PaymentsHistory/PaymentsHistory";
 import UserHome from "../Pages/Dashboard/UserHome/UserHome";
 import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
+import UserMessages from "../Pages/Dashboard/UserMessages/UserMessages";
+import BuyProducts from "../Pages/Dashboard/BuyProducts/BuyProducts";
 
 export const routers=createBrowserRouter([
     {
@@ -97,6 +99,10 @@ export const routers=createBrowserRouter([
             element:<MyCart></MyCart>
         },
         {
+            path:'buyProducts',
+            element:<BuyProducts></BuyProducts>,
+        },
+        {
             path:'userHome',
             element:<UserHome></UserHome>
         },
@@ -128,6 +134,11 @@ export const routers=createBrowserRouter([
         {
             path:'paymentsHistory',
             element:<AdminRoute><PaymentsHistory></PaymentsHistory></AdminRoute>
+        },
+        {
+            path:'userMessage',
+            element:<AdminRoute><UserMessages></UserMessages></AdminRoute>,
+            loader:()=>fetch(`https://ab-mart-ecom-server-side.vercel.app/userMessage`)
         }
        ]
     }

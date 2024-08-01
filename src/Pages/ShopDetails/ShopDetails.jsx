@@ -26,12 +26,8 @@ const ShopDetails = () => {
     console.log(productPrice,productNumber) 
    const [similarProduct]=useProductCategory(productCategory);
    const calculateProductPrice=productPrice*productNumber;
-   console.log(calculateProductPrice,'ccadklsd',typeof(calculateProductPrice))
-   const convertProductPrice=parseFloat(calculateProductPrice.toFixed(2));
 
 
-
-   console.log(calculateProductPrice,'ddddrpuce',productPrice)
    const handleMinus=()=>{
     if (productNumber<2) {
         return Swal.fire({
@@ -47,20 +43,21 @@ setProductNumber(productNumber-1)
     const handlePlus=()=>{
 setProductNumber(productNumber+1)
     }
+    const cartItem={
+      productId:_id,
+      email:user?.email,
+      productName,
+      productBrandName,
+      productCategory,
+      productSize:selectedItem,
+      productQuntity:productNumber,
+      productColor,
+      productImage,
+      productPrice:calculateProductPrice
+    }
     const handleAddCart=()=>{
         if (user && user?.email) {
-            const cartItem={
-              productId:_id,
-              email:user?.email,
-              productName,
-              productBrandName,
-              productCategory,
-              productSize:selectedItem,
-              productQuntity:productNumber,
-              productColor,
-              productImage,
-              productPrice:calculateProductPrice
-            }
+            
             axiosSecure.post('/carts',cartItem)
             .then((res)=>{
               if (res.data?.insertedId) {
@@ -94,6 +91,42 @@ setProductNumber(productNumber+1)
             });
           }
 
+    }
+    const handleBuyNow=()=>{
+      if (user && user?.email) {
+            
+        axiosSecure.post('/buyProduct',cartItem)
+        .then((res)=>{
+          if (res.data?.insertedId) {
+            Swal.fire({
+              title: "success!",
+              text: "You cart add successfully!",
+              icon: "success"
+            });
+            console.log(res,'res')
+       
+          }
+         
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+    else{
+        Swal.fire({
+          title: "You are not logged In",
+          text: "please logIn to add this cart!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, logIn!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+       navigate('/logIn',{state:{from:location}})
+          }
+        });
+      }
     }
     return (
         <div className='my-[60px]'>
@@ -136,7 +169,7 @@ setProductNumber(productNumber+1)
                   
                     </h3>
                     <div className='flex gap-4 '>
-                        <button className='btn bg-[#0FA855] hover:bg-[#0FA855] text-white font-bold rounded btn-sm'>Buy Now</button> <button className='btn btn-sm border-2 rounded border-[#0FA855]' onClick={handleAddCart}>Add to Cart</button>
+                        <button className='btn bg-[#0FA855] hover:bg-[#0FA855] text-white font-bold rounded btn-sm' onClick={handleBuyNow}><NavLink to="/dashboard/buyProducts">Buy Now</NavLink> </button> <button className='btn btn-sm border-2 rounded border-[#0FA855]' onClick={handleAddCart}>Add to Cart</button>
                     </div>
                 </div>
                 <div>
