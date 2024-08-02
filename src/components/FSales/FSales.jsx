@@ -2,6 +2,7 @@
 import { FaStar, FaChevronRight  } from "react-icons/fa";
 import useSellData from '../../hooks/useSellData';
 import { useState } from "react";
+import CountDownTimer from "../CountDownTimer/CountDownTimer";
 const FSales = () => {
     const [sales]=useSellData();
     const [viewAll,setViewAll]=useState(false)
@@ -36,11 +37,11 @@ const FSales = () => {
     }
     return (
         <div className='py-[40px]'>
-            <div className='flex'>
-                <div><h3>Flash Sale</h3></div>
-                <div>
-                    days
-                </div>
+            <div className='flex justify-between items-center mb-[50px]'>
+                <div className="text-2xl font-bold capitilize"><h3>Flash Sale</h3></div>
+              
+                <CountDownTimer></CountDownTimer>
+           
 
             </div>
             <div className='grid grid-cols-4 gap-4'>
