@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import BradCumb from '../../Shared/BradCumb/BradCumb';
-import { Outlet } from 'react-router-dom';
+
 import CategoryList from '../../../components/CategoryList/CategoryList';
 import './style.css';
-import useProducts from '../../../hooks/useProducts';
 import PCard from './PCard';
 import useProductCategory from '../../../hooks/useProductCategory';
-import useProductcolor from '../../../hooks/useProductcolor';
 
 import useProductBrand from '../../../hooks/useProductBrand';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -18,44 +16,62 @@ const Shop = () => {
   const [selectItem,setSelectedItem]=useState('allCategory');
   const [selectColor,setSelectedColor]=useState('allColors');
   const [checkedValue,setCheckedValue]=useState('allBrand');
- const [products,setProducts]=useState([]);
+  const [products,setProducts]=useState([]);
+  const [productCategory,setProductCategory]=useState('');
+  const [productColor,setProductColor]=useState('');
  //const [products]=useProducts()
   const [itemPerPage,setItemPerPage]=useState(10);
   const [currentPage,setCurrentPage]=useState(0);
   const [count,setCount]=useState(0);
+  const [minPrice,setMinPrice]=useState('');
+  const [maxPrice,setMaxPrice]=useState('');
   const numberOfPages=Math.ceil(count/itemPerPage);
   const pages=[...Array(numberOfPages).keys()]
 
   const handleCheck=(e)=>{
       setCheckedValue(e.target.value)
   };
-  console.log('setCount',count)
+
 const abc=useProductBrand(checkedValue);
 
   const handleSelectColor=(e)=>{
     setSelectedColor(e.target.value)
+
+    setProductColor(selectColor)
   }
   const handleSelectItem=(e)=>{
 setSelectedItem(e.target.value)
+console.log(e.target.value)
+setProductCategory(e.target.value)
   };
-  // pagination code
-  useEffect(()=>{
-    fetch(`https://ab-mart-ecom-server-side.vercel.app/productCount`)
-    .then((res)=>res.json())
-    .then((data)=>setCount(data.totalProductNumber))
-  },[]);
-  useEffect(()=>{
-    fetch(`https://ab-mart-ecom-server-side.vercel.app/conditionProducts?page=${currentPage}&size=${itemPerPage}`)
-    .then((res)=>res.json())
-    .then((data)=>setProducts(data))
-  },[currentPage,itemPerPage])
 
+  
+
+useEffect(()=>{
+  fetch(`http://localhost:9000/conditionProducts?page=${currentPage}&size=${itemPerPage}&productCategory=${productCategory}&productColor=${productColor}&minPrice=${minPrice}&maxPrice=${maxPrice}`)
+  .then((res)=>res.json())
+  .then((data)=>{
+     setCount(data.totalProducts)
+    setProducts(data.result)
+
+  })
+},[currentPage,itemPerPage,productCategory,productColor,minPrice,maxPrice])
 
 const handleItemsPerPage=(e)=>{
 const displayItem=parseInt(e.target.value);
 console.log('displayItem',displayItem)
 setItemPerPage(displayItem);
 setCurrentPage(0);
+};
+const handleMinPrice=(e)=>{
+  setMinPrice(e.target.value)
+  console.log(e.target.value)
+  setCurrentPage(0)
+};
+const handleMaxPrice=(e)=>{
+  setMaxPrice(e.target.value)
+  console.log(e.target.value)
+  setCurrentPage(0)
 }
 const handlePrevPage=()=>{
 if (currentPage>0) {
@@ -66,7 +82,13 @@ const handleNextPage=()=>{
   if (currentPage<pages.length-1) {
     setCurrentPage(currentPage+1)
   }
-}
+};
+const handlePageChange=(newPage)=>{
+  console.log(newPage,'page') 
+ setCurrentPage(newPage)
+ };
+
+
     return (
         <div>
             <Helmet>
@@ -101,7 +123,7 @@ const handleNextPage=()=>{
 <div>
     <h3 className='my-2 font-semibold text-lg'>Price</h3>
     <div>
-        <input type='number' className='w-[90px] rounded-lg py-2'/> <span className='mx-1 font-semibold'>To</span> <input type='number' className='w-[90px]  rounded-lg py-2'/> 
+        <input type='number' className='w-[90px] rounded-lg py-2' value={minPrice} onChange={handleMinPrice}/> <span className='mx-1 font-semibold'>To</span> <input type='number' className='w-[90px]  rounded-lg py-2' value={maxPrice} onChange={handleMaxPrice}/> 
     </div>
 </div>
 
@@ -142,10 +164,7 @@ const handleNextPage=()=>{
   </select>
                   </div>
                     <div className='grid grid-cols-3 gap-8 overflo-x-hidden my-4'>
-                 {/* { 
-                 products?.length>0?
-                 products?.map((product,index)=><PCard key={index} product={product}></PCard>):products.map((product,index)=><PCard key={index} product={product}></PCard>)
-                 } */}
+             
                      {
                       products?.map((product,index)=><PCard key={index} product={product}></PCard>)
                      }
@@ -156,7 +175,7 @@ const handleNextPage=()=>{
                       <div>
                       <button onClick={handlePrevPage} className='mx-3 btn' disabled={currentPage===0}><FaChevronLeft/> </button>
 {
-  pages.map((page)=><button key={page} disabled className={currentPage===page?'bg-gradient-to-r from-[#24D381] to-[#32EC95] text-white p-[4px_8px] mx-3':'mx-3'}>{page+1}</button>)
+  pages.map((page,index)=><button key={page} disabled className={currentPage===page?'bg-gradient-to-r from-[#24D381] to-[#32EC95] text-white p-[4px_8px] mx-3':'mx-3'}><span>{page+1}</span></button>)
 }
 <button onClick={handleNextPage} className='mx-3 btn' disabled={currentPage===pages.length-1}><FaChevronRight/> </button>
   </div> 

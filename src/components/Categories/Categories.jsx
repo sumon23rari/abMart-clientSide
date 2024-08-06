@@ -9,7 +9,7 @@ const Categories = () => {
                 <h3 className='text-xl text-[#039D55] font-bold mb-2'>Categories</h3>
                 <p className='text-[#039D55]'>Choose your favorite category</p>
             </div>
-            <div className='grid gap-8 grid-cols-4 px-8'>
+            <div className='grid gap-8 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 px-8'>
      {
         sales.slice(0,8).map((saleItem,index)=> <div className="card w-full bg-base-100 shadow-xl" key={index}>
         <figure className='pt-4'><img src={saleItem.product_image}  alt="Shoes" /></figure>

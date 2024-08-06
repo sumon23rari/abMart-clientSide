@@ -5,7 +5,7 @@ import img3 from "../../assets/delivery/de3.png";
 import img4 from "../../assets/delivery/de4.png";
 const ServiceInfo = () => {
     return (
-        <div className='grid grid-cols-4 gap-8 py-[40px] bg-[#fff]'>
+        <div className='grid lg:grid-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-8 py-[40px] bg-[#fff]'>
             <div className="card w-full">
   <figure><img src={img1} alt="Shoes" /></figure>
   <div className="card-body">
