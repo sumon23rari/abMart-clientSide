@@ -28,6 +28,9 @@
 }
 .subButton{
     background-color: rgb(188 188 188 / 0.23);
+  
+  
+    margin-left: 2%;
 }
 .bootomFoot{
     background-color: rgba(0, 0, 0, 0.336);

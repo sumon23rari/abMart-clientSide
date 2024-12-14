@@ -45,9 +45,9 @@ const Reviews = () => {
        
       }
     return (
-        <div className='my-[40px]'>
+        <div className='my-[20px] md:my-[40px]'>
           
-            <form  onSubmit={handleSubmit(onSubmit)} className='mx-auto md:max-w-screen-md'>
+            <form  onSubmit={handleSubmit(onSubmit)} className='mx-auto max-w-md md:max-w-screen-md  '>
                 
       <div className="form-control">
             
@@ -62,10 +62,10 @@ const Reviews = () => {
                 {errors.review && <span className='text-red '>review is required</span>}
               </div> 
               <div className="form-control mt-6">
-        <input className="btn btn-primary w-1/4 font-bold text-xl bg-[#039D55] text-white hover:bg-[#039D55]" type="submit" value="submit  reviews"  />
+        <input className="btn btn-primary md:w-1/4 w-2/4 mx-auto font-bold text-xl bg-[#039D55] text-white hover:bg-[#039D55]" type="submit" value="submit  reviews"  />
         </div>
             </form>
-            <div className='py-[25px] max-w-screen-md mx-auto'>
+            <div className='py-[25px] md:max-w-screen-md mx-auto'>
               {
                 review.map((reviewText,index)=><div key={index} className='w-full py-6 px-4 border rounded'>
                  

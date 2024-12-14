@@ -98,6 +98,8 @@ const LogIn = () => {
               </div>
             </form>
       <p className='text-center my-3'>create have an account? please<Link to="/register" className='font-bold'>signUp</Link></p>
+      <p>demo user:hydarAli@gmail.com</p>
+      <p>demo password:As$02dhe</p>
       <div className="divider">OR</div>
       <div className="form-control mt-6">
           <button className="btn  btn-outline text-[#1760CE] text-xl font-bold border-[#1760CE] hover:bg-[#039D55]"> <FaFacebook/>  <span>facebook</span></button>

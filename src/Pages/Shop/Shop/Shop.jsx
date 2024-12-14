@@ -96,13 +96,13 @@ const handlePageChange=(newPage)=>{
             </Helmet>
             <BradCumb title={'shops'}></BradCumb>
             <div className='grid grid-cols-4 gap-4'>
-                <div className='col-span-1 mr-[50px] flex flex-col gap-[35px]'>
+                <div className='md:col-span-1 col-span-4 md:mr-[50px] flex flex-col gap-[35px]'>
                 <CategoryList handleCheck={handleCheck}></CategoryList>
                 <div className=' px-5 py-[25px] bg-[#EAFFF4]'>
                     <h3 className='text-center font-bold text-2xl'>Filter</h3>
-                    <label className="form-control w-full max-w-xs">
+                    <label className="form-control w-full md:max-w-xs">
   <div className="label">
-    <span className="label-text">Pick the best fantasy franchise</span>
+    <span className="label-text text-center">Pick the best fan tasy franchise</span>
 
   </div>
   
@@ -127,7 +127,7 @@ const handlePageChange=(newPage)=>{
     </div>
 </div>
 
-  <label className="form-control w-full max-w-xs">
+  <label className="form-control w-full md:max-w-xs">
   <div className="label">
     <span className="label-text font-semibold text-lg">Choose color</span>
 
@@ -146,13 +146,15 @@ const handlePageChange=(newPage)=>{
 </label>
                 </div>
                 <div className=' shopSideBottom text-center'>
+                  <div className='hidden md:block'>
                     <h3 className='pt-[100px]'></h3>
                     <h3 className=' text-center text-[#38464F] font-semibold relative top-[-82px]'>Discount price</h3>
                     <h3 className='pt-[30px] text-white font-semibold text-3xl'>winter sale</h3>
                     <button className='btn text-center mt-[30px] mb-[60px] bg-[#696969] font-bold text-white capitilize text-xl border-0'>shop now</button>
                 </div>
                 </div>
-                <div className='col-span-3'>
+                </div>
+                <div className='md:col-span-3 col-span-4'>
                   <div className='flex justify-between py-4 px-2'>
                     <h3 className='flex items-center capitilize font-bold text-xl'>Show display products</h3>
                     <select className="select select-bordered" value={itemPerPage} onChange={handleItemsPerPage}>
@@ -163,7 +165,7 @@ const handlePageChange=(newPage)=>{
                     <option value="50">20</option>
   </select>
                   </div>
-                    <div className='grid grid-cols-3 gap-8 overflo-x-hidden my-4'>
+                    <div className='grid md:grid-cols-3  gird-cols-2 md:gap-8 gap-4 overflo-x-hidden my-4'>
              
                      {
                       products?.map((product,index)=><PCard key={index} product={product}></PCard>)
@@ -171,7 +173,7 @@ const handlePageChange=(newPage)=>{
                       
                 
                     </div>
-                    <div className='col-span-3 lg:mt-[50px] mb-[30px] mx-auto grid justify-items-center'>
+                    <div className='  md:col-span-3 lg:mt-[50px] mb-[30px] mx-auto grid justify-items-center'>
                       <div>
                       <button onClick={handlePrevPage} className='mx-3 btn' disabled={currentPage===0}><FaChevronLeft/> </button>
 {

@@ -12,7 +12,7 @@ import ServiceInfo from '../../../components/ServiceInfo/ServiceInfo';
 const Home = () => {
 
     return (
-        <div className='mt-4'>
+        <div className='mt-4 max-w-[1140px] mx-auto'>
             
 <Banner></Banner>
 <FSales></FSales>

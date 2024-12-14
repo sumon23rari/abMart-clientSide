@@ -133,7 +133,7 @@ setProductNumber(productNumber+1)
             <Helmet>
               <title>ShopDetails</title>
             </Helmet>
-            <div className='grid grid-cols-3 gap-4'>
+            <div className='grid md:grid-cols-3 grid-cols-1 gap-4'>
                 <div>
                     <img src={productImage} alt='productimage' className='w-full'/>
                 </div>
@@ -207,12 +207,12 @@ products
             {/* ====================product information================= */}
             <div>
 <div className='my-7'>
-<div className='text-xl font-bold '>
+<div className='text-xl font-bold text-center '>
 <button className='px-4 border-r-2 border-black cursor-pointer'><NavLink to={`/shops/${_id}/productInfo`}>product Info</NavLink></button> 
  
  <button className='px-4 border-r-2 border-black cursor-pointer'> <NavLink to={`/shops/${_id}/wServices`}>warranty services</NavLink></button> 
 
- <button className='px-4 cursor-pointer'><NavLink to={`/shops/${_id}/review`}> Reviews </NavLink></button> 
+ <button className='px-4 cursor-pointer mt-4 md:mt-0'><NavLink to={`/shops/${_id}/review`}> Reviews </NavLink></button> 
 </div>
 <div>
     <Outlet></Outlet>
@@ -229,7 +229,7 @@ products
 
             </div>
             {/*====================== similar products==================== */}
-            <div className='grid grid-cols-4 gap-6 pb-[30px]'>
+            <div className='grid lg:grid-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-6 md:pb-[30px]'>
 
 {
     similarProduct.slice(0,4).map((smProduct,index)=><div className="card bg-base-100 w-full shadow-xl" key={index}>

@@ -9,6 +9,7 @@ const useProductBrand = (brandName) => {
         queryFn:async()=>{
             const res=await axiosPublic.get(`/brandProducts?brandProduct=${brandName}`)
             return res.data;
+        
         }
     })
     return[brandProducts,loading,refetch]

@@ -11,34 +11,48 @@ const FSales = () => {
     if (viewAll)   {
       selsData=  sales.map((saleItem,index)=><div className="card w-full bg-base-100 shadow-xl" key={index}>
         <figure className='pt-4  relative'><img src={saleItem.product_image}  alt="Shoes" /> <span className="radius text-white px-4 rounded-lg bg-[#039D55] z-30 absolute top-3 left-3">10%</span></figure>
-        <div className="card-body mt-2">
-            <h2 className='font-bold text-lg text-[#E4AA12] flex '><FaStar/> <FaStar className='mx-1'/> <FaStar/> <FaStar className='mx-1'/><FaStar/></h2>
-          <h2 className="card-title">{saleItem.product_name}</h2>
-          
-          <div className="flex gap-4">
-            <del>${saleItem.product_deal}.00</del> 
-            <h3>${saleItem.product_price}.00</h3>
-          </div>
-        </div>
+      <div className="card-body mt-2 flex flex-col items-center text-center">
+  <h2 className="font-bold text-lg text-[#E4AA12] flex items-center justify-center">
+    <FaStar /> 
+    <FaStar className="mx-1" /> 
+    <FaStar /> 
+    <FaStar className="mx-1" />
+    <FaStar />
+  </h2>
+  <h2 className="card-title">{saleItem.product_name}</h2>
+
+  <div className="flex gap-4 items-center justify-center">
+    <del>${saleItem.product_deal}.00</del>
+    <h3>${saleItem.product_price}.00</h3>
+  </div>
+</div>
+
       </div>)
     } else   {
       selsData=  sales.slice(0,4).map((saleItem,index)=><div className="card w-full bg-base-100 shadow-xl" key={index}>
          <figure className='pt-4  relative'><img src={saleItem.product_image}  alt="Shoes" /> <span className="radius text-white px-4 rounded-lg bg-[#039D55] z-30 absolute top-3 left-3">10%</span></figure>
-        <div className="card-body mt-2">
-            <h2 className='font-bold text-lg text-[#E4AA12] flex '><FaStar/> <FaStar className='mx-1'/> <FaStar/> <FaStar className='mx-1'/><FaStar/></h2>
-          <h2 className="card-title">{saleItem.product_name}</h2>
-          
-          <div className="flex gap-4">
-            <del>${saleItem.product_deal}.00</del> 
-            <h3>${saleItem.product_price}.00</h3>
-          </div>
-        </div>
+         <div className="card-body mt-2 flex flex-col items-center text-center">
+  <h2 className="font-bold text-lg text-[#E4AA12] flex items-center justify-center">
+    <FaStar /> 
+    <FaStar className="mx-1" /> 
+    <FaStar /> 
+    <FaStar className="mx-1" />
+    <FaStar />
+  </h2>
+  <h2 className="card-title">{saleItem.product_name}</h2>
+
+  <div className="flex gap-4 items-center justify-center">
+    <del>${saleItem.product_deal}.00</del>
+    <h3>${saleItem.product_price}.00</h3>
+  </div>
+</div>
+
       </div>)
     }
     return (
         <div className='py-[40px]'>
             <div className='flex justify-between items-center mb-[50px]'>
-                <div className="text-2xl font-bold capitilize"><h3>Flash Sale</h3></div>
+                <div className=" text-lg md:text-2xl  font-bold capitilize"><h3>Flash Sale</h3></div>
               
                 <CountDownTimer></CountDownTimer>
            

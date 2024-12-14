@@ -15,7 +15,7 @@ const Categories = () => {
         <figure className='pt-4'><img src={saleItem.product_image}  alt="Shoes" /></figure>
         <div className="card-body mt-2">
           
-          <h2 className="card-title">{saleItem.product_name}</h2>
+          <h2 className="card-title justify-center">{saleItem.product_name}</h2>
           
          
         </div>

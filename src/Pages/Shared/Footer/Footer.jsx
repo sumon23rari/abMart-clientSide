@@ -7,8 +7,8 @@ import { FaFacebook,FaTwitter, FaInstagram,FaYoutube,FaWhatsapp,FaSkype } from "
 const Footer = () => {
     return (
         <div className='footerBg'>
-      <footer className="  py-10 text-white max-w-screen-xl mx-auto z-10" >
-        <div className='grid grid-cols-3 gap-4'>
+      <footer className="py-[20px]  md:py-10 text-white max-w-[1140px] mx-auto z-10" >
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center'>
         <div>
        <h3 className='text-white font-semibold text-2xl uppercase pb-4'>About us</h3> 
     <img src={abFoot}/>
@@ -35,7 +35,7 @@ at Bangladesh</p>
       </ul>
         </div>
         </div>
-        <div className='grid grid-cols-3 gap-4 pt-[30px]'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 md:pt-[30px] justify-items-center'>
           <div>
             <h2 className='font-semibold text-white pb-3'>follow us on</h2>
             <h3 className='flex gap-2 font-bold text-2xl'><span className='iconColor'><FaFacebook/></span><span className='iconColor'><FaTwitter/></span><span className='iconColor'><FaInstagram/></span> <span className='iconColor'><FaYoutube/></span><span className='iconColor'><FaWhatsapp/></span> <span className='iconColor'><FaSkype/></span></h3>
@@ -65,7 +65,7 @@ to get latest updates</span>
       </footer>
       <footer className="footer footer-center p-4 bootomFoot">
   <aside>
-    <p className='cursor-pointer text-white text-xl'>Copy write by  @appsbucket</p>
+    <p className='cursor-pointer text-white text-lg md:text-xl'>Copy write by  @appsbucket</p>
   </aside>
 </footer>
       </div>

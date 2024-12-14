@@ -6,9 +6,9 @@ const PrductInfo = () => {
     const {productImage}=pDetails;
     return (
         <div className='py-4'>
-         <div className='grid grid-cols-4 gap-4  md:ml-[60px]'>
+         <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4  md:ml-[60px]'>
             <div className='col-span-3'>
-            <ul class="list-disc">
+            <ul class="list-disc mx-5 overflow-hidden">
               <li className="my-1 font-semibold">
                 Beautiful Saddam Double Sofa 2 Seat For Small Family and Office Usage
            A very good product to decorate your office and room. It’s easily movable. 

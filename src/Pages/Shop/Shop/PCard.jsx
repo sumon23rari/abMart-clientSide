@@ -10,9 +10,9 @@ const PCard = ({product}) => {
             <div className='flex justify-center'>
   <figure><img src={productImage} alt="Shoes" className='w-[140px] h-[140px] rounded'/></figure>
   </div>
-  <div className="pt-[40px]">
-    <h3 className='text-[#E4AA12] flex gap-2'><FaStar/> <FaStar/> <FaStar/> <FaStar/><FaStar/></h3>
-    <h2 className="card-title py-[7px]">{productName}</h2>
+  <div className="pt-[40px] text-center">
+    <h3 className='text-[#E4AA12] flex gap-2 justify-center'><FaStar/> <FaStar/> <FaStar/> <FaStar/><FaStar/></h3>
+    <h2 className="card-title py-[7px] justify-center">{productName}</h2>
    
     
      <h3>${productPrice}</h3>
