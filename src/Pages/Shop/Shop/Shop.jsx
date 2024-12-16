@@ -48,7 +48,7 @@ setProductCategory(e.target.value)
   
 
 useEffect(()=>{
-  fetch(`https://ab-mart-ecom-server-side.vercel.app/conditionProducts?page=${currentPage}&size=${itemPerPage}&productCategory=${productCategory}&productColor=${productColor}&minPrice=${minPrice}&maxPrice=${maxPrice}`)
+  fetch(`http://localhost:9000/conditionProducts?page=${currentPage}&size=${itemPerPage}&productCategory=${productCategory}&productColor=${productColor}&minPrice=${minPrice}&maxPrice=${maxPrice}`)
   .then((res)=>res.json())
   .then((data)=>{
      setCount(data.totalProducts)

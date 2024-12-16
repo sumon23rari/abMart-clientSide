@@ -9,7 +9,7 @@ const AuthProviders = ({children}) => {
     const [loading,setLoading]=useState(true);
     const axiosPublic=useAxiosPublic();
   
-    const googleProvider=new GoogleAuthProvider();
+    const googleProvider = new GoogleAuthProvider();
     const handleGoogleSignIn=()=>{
         setLoading(true)
       return  signInWithPopup(auth,googleProvider)
@@ -43,6 +43,7 @@ const AuthProviders = ({children}) => {
                 .then(res=>{
                    
                     if (res.data.token) {
+                        console.log(res?.data?.token,'dfsdfsdf')
                         localStorage.setItem('abMartAccess-token',res.data.token)
                         setLoading(false)
                     }

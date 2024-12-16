@@ -26,7 +26,7 @@ const AdminHome = () => {
     const axiosSecure=useAxiosSecure();
     const [chartData,setChartData]=useState([]);
     useEffect(()=>{
-      fetch(`https://ab-mart-ecom-server-side.vercel.app/order-states`)
+      fetch(`http://localhost:9000/order-states`)
       .then((res)=>res.json())
       .then((data)=>{
       const formattedData=Object.keys(data).map(category=>({
@@ -127,7 +127,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 </div>
 
 <div className="stat bg-gradient-to-r from-[#FB3CFF] to-[#FF9BF5] px-[35px] py-[25px] rounded">
-<div className='grid grid-cols-2 gap-4 place-items-center text-white '>
+<div className='grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center text-white '>
     <div>
     <VscListUnordered className='text-3xl'/>
    </div>

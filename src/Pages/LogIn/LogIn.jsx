@@ -24,13 +24,13 @@ const LogIn = () => {
     
       // The signed-in user info.
       const user = result.user;
-   
      Swal.fire({
-       title: `${user?.displayName} logIn successfully`,
-       text: "You clicked the button!",
-       icon: "success"
-     });
-   
+      position: "middle",
+      icon: "success",
+      title: `${user?.displayName} logIn successfully`,
+      showConfirmButton: false,
+      timer: 1500
+    });
      navigate(from, { replace: true });
     })
     .catch((error) => {
@@ -46,10 +46,13 @@ const LogIn = () => {
     logInUser(data.email,data.password)
     .then((userCredential)=>{
       const user = userCredential.user;
+     
       Swal.fire({
+        position: "middle",
+        icon: "success",
         title: "user logIn successfully",
-        text: "You clicked the button!",
-        icon: "success"
+        showConfirmButton: false,
+        timer: 1500
       });
       navigate(from, { replace: true });
       console.log('user',user)
@@ -105,7 +108,7 @@ const LogIn = () => {
           <button className="btn  btn-outline text-[#1760CE] text-xl font-bold border-[#1760CE] hover:bg-[#039D55]"> <FaFacebook/>  <span>facebook</span></button>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-outline text-[#FF4747] border-[#FF4747] font-bold text-xl " onClick={handleUserGoogle}><FaGoogle/> <span>google</span></button>
+          <button className="btn btn-outline text-[#FF4747] border-[#FF4747] hover:bg-[#039D55] font-bold text-xl " onClick={handleUserGoogle}><FaGoogle/> <span>google</span></button>
         </div>
       </div>
     </div>

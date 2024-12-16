@@ -30,13 +30,13 @@ handleGoogleSignIn()
   const user = result.user;
  console.log(user,'user',user.displayName)
  const userInfo={
-  name:user.displayName,
-  email:user.email,
-  photo:user.photoURL
+  name:user?.displayName,
+  email:user?.email,
+  photo:user?.photoURL
 }
 axiosPublic.post('/users',userInfo)
 .then((res)=>{
-  if (res.data.insertedId) {
+  if (res?.data?.insertedId) {
     Swal.fire({
       position: "middle",
       icon: "success",
@@ -59,6 +59,7 @@ console.log(errorMessage)
   // ...
 });
   };
+  // load captcha
   useEffect(()=>{
     loadCaptchaEnginge(6)
   },[]);
@@ -201,7 +202,7 @@ const onSubmit=(data)=>{
           <button className="btn  btn-outline text-[#1760CE] text-xl font-bold border-[#1760CE] hover:bg-[#039D55]"> <FaFacebook/>  <span>facebook</span></button>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-outline text-[#FF4747] border-[#FF4747] font-bold text-xl " onClick={handleUserGoogle}><FaGoogle/> <span>google</span></button>
+          <button className="btn btn-outline text-[#FF4747] border-[#FF4747] font-bold text-xl hover:bg-[#039D55]" onClick={handleUserGoogle}><FaGoogle/> <span>google</span></button>
         </div>
       </div>
     </div>

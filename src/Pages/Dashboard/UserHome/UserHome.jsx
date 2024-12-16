@@ -10,7 +10,7 @@ const UserHome = () => {
                 <title>userHome</title>
             </Helmet>
             <h3 className='text-3xl'>
-                <span>Hi, WellCome</span>
+                <span>Hi, WellCome &nbsp; &nbsp;</span>
                 {
                 user?.displayName?user.displayName:'Back'
             }

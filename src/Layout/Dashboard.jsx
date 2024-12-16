@@ -7,11 +7,11 @@ import useAdmin from '../hooks/useAdmin';
 
 const Dashboard = () => {
     const [isAdmin]=useAdmin();
-  console.log(isAdmin,'isAdmin')
+  console.log(isAdmin,'isAdmin',isAdmin)
     return (
         <div className='flex'>
-           <div className='w-64 min-h-screen bg-gradient-to-r from-[#24D381] to-[#32EC95] text-white font-bold'>
-           <h3 className='uppercase ml-8 mt-6 font-bold text-2xl'>AbMart</h3>
+           <div className='w-full md:w-64 py-10 md:py-0 md:min-h-screen bg-gradient-to-r from-[#24D381] to-[#32EC95] text-white font-bold'>
+           <h3 className='uppercase ml-8 md:mt-6 font-bold text-2xl'>AbMart</h3>
            <p className='ml-8 tracking-wider text-2xl'>shopping</p>
             <ul  className='menu font-bold uppercase mt-4'>
                 {
