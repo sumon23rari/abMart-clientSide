@@ -52,7 +52,7 @@ const Testimonials = () => {
     return (
         <div>
             <div className='text-center title my-[80px]'>
-                <h3 className='capitalize mb-2s text-[25px] capitalize'>Testimonials</h3>
+                <h3 className=' mb-2s text-[25px] capitalize'>Testimonials</h3>
                 <h3 className='font-bold text-[#039D55] text-[30px] capitalize'>User Feedbacks</h3>
             </div>
             <div className="slider-container overflox-hidden max-w-screen-xl mx-auto mb-[80px]">

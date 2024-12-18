@@ -26,7 +26,7 @@ const AdminHome = () => {
     const axiosSecure=useAxiosSecure();
     const [chartData,setChartData]=useState([]);
     useEffect(()=>{
-      fetch(`http://localhost:9000/order-states`)
+      fetch(`https://ab-mart-ecom-server-side.vercel.app/order-states`)
       .then((res)=>res.json())
       .then((data)=>{
       const formattedData=Object.keys(data).map(category=>({

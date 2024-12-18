@@ -1,7 +1,7 @@
 import axios from "axios";
-//baseURL:`http://localhost:9000`
+//baseURL:`https://ab-mart-ecom-server-side.vercel.app`
 const axiosPublic=axios.create({
-    baseURL:`http://localhost:9000`
+    baseURL:`https://ab-mart-ecom-server-side.vercel.app`
 })
 const useAxiosPublic = () => {
     return axiosPublic;

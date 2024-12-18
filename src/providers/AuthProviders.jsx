@@ -34,30 +34,31 @@ const AuthProviders = ({children}) => {
         setLoading(true)
         return signOut(auth)
     }
-    useEffect(()=>{
-        const unSubscribe=onAuthStateChanged(auth,currentUser=>{
-            setUser(currentUser)
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
+            setUser(currentUser);
             if (currentUser) {
-                const userInfo={email:currentUser.email}
-                axiosPublic.post('/jwt',userInfo)
-                .then(res=>{
-                   
-                    if (res.data.token) {
-                        console.log(res?.data?.token,'dfsdfsdf')
-                        localStorage.setItem('abMartAccess-token',res.data.token)
-                        setLoading(false)
-                    }
-                })
-            } else {
-              localStorage.removeItem('abMartAccess-token') 
-              setLoading(false) 
+                // get token and store client
+                const userInfo = { email: currentUser.email };
+                axiosPublic.post('/jwt', userInfo)
+                    .then(res => {
+                        if (res.data.token) {
+                            localStorage.setItem('abMartAccess-token', res.data.token);
+                            setLoading(false);
+                        }
+                    })
             }
-           setLoading(false)
-        })
-        return()=>{
-            return unSubscribe()
+            else {
+                // TODO: remove token (if token stored in the client side: Local storage, caching, in memory)
+                localStorage.removeItem('abMartAccess-token');
+                setLoading(false);
+            }
+            
+        });
+        return () => {
+            return unsubscribe();
         }
-    },[axiosPublic])
+    }, [axiosPublic])
     const authInfo={handleGoogleSignIn,createUser,loading,logInUser,profileUpdate,user,logOut}
     return (
         <AuthContext.Provider value={authInfo}>

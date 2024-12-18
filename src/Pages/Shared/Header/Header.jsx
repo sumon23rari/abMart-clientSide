@@ -9,13 +9,13 @@ import { IoPerson } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProviders';
 import useAuth from '../../../hooks/useAuth';
-import { ThemeContext } from '../../../providers/ThemeProvider';
+
 
 
 const Header = () => {
   // const {navOpen,setNavOpen}=useContext(AuthContext);
   const [navOpen,setNavOpen]=useState(false);
-  const {theme,toggleTheme}=useContext(ThemeContext)
+  // const {theme,toggleTheme}=useContext(ThemeContext)
   const {user,logOut}=useAuth();
   console.log(user,'userInfo')
   const itemsRef=useRef();
