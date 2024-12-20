@@ -7,10 +7,11 @@ const UserMessages = () => {
     return (
         <div>
             <SectionTitle subHeading={'check message'} heading={'users all messages'}></SectionTitle>
-            <h3>userMessage total:{userMessage.length}</h3>
-            <div  className='rounded drop-shadow-lg  p-8 m-10 bg-[#E8E8E8] min-h-screen'>
-            <table className="table">
-            <thead className='font-bold text-xl bg-gradient-to-r from-[#24D381] to-[#32EC95] text-white text-white rounded'>
+            <div className='rounded drop-shadow-lg overflow-x-hidden md:p-8 m-10 bg-[#E8E8E8] min-h-screen'>
+            <h3 className='text-center'>userMessage total:{userMessage.length}</h3>
+            <div className='!overflow-x-scroll'>
+            <table className="table ">
+            <thead className='font-bold text-xl bg-gradient-to-r from-[#24D381] to-[#32EC95] text-white rounded'>
                         <tr>
                         <th>#</th>
                             <th>userName</th>
@@ -20,10 +21,20 @@ const UserMessages = () => {
                         </tr>
                     </thead>
                     <tbody>
-
+        {
+            userMessage.map((user,index)=><tr className="hover" key={user._id}>
+                    <td>{index+1}</td>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                    <td><img src={`${user?.photo}`} className='w-[30px] h-[30px]'/></td>    
+                    <td>{user?.role}</td>    
+                
+                </tr>)
+        }
                     </tbody>
                 </table>
                 </div>
+        </div>
         </div>
     );
 };

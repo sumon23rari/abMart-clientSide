@@ -49,10 +49,10 @@ const MyCart = () => {
     return (
       <div>
         <SectionTitle subHeading={"My Cart"} heading={"WANNA ADD MORE?"} ></SectionTitle>
-        <div className='rounded drop-shadow-lg p-8 m-10 bg-white min-h-screen'>
-        <div className='flex justify-between '>
-          <h3 className='font-bold text-xl uppercase'>total orders:{carts.length}</h3>
-          <h3 className='font-bold text-xl uppercase'>total price:{convertedTotalPrice}</h3>
+        <div className='rounded drop-shadow-lg overflow-x-hidden md:p-8 m-10 bg-white min-h-screen'>
+        <div className='flex justify-between items-center'>
+          <h3 className='font-bold text-lg md:text-xl capitalize md:uppercase'>total orders:{carts.length}</h3>
+          <h3 className='font-bold text-lg md:text-xl capitalize md:uppercase'>total price:{convertedTotalPrice}</h3>
   <div>
       {
         carts.length ? <Link to={`/dashboard/payment`}><buton className="btn bg-gradient-to-r from-[#24D381] to-[#32EC95] text-white">pay</buton></Link>:
@@ -60,7 +60,7 @@ const MyCart = () => {
       }
   </div>
         </div>
-        <div className="overflow-x-auto mt-4">
+        <div className="overflow-x-scroll mt-4">
 <table className="table">
 {/* head */}
 <thead className='font-bold text-xl bg-gradient-to-r from-[#24D381] to-[#32EC95] text-white rounded'>

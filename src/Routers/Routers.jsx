@@ -133,7 +133,7 @@ export const routers=createBrowserRouter([
         },
         {
             path:'paymentsHistory',
-            element:<PaymentsHistory></PaymentsHistory>
+            element:<AdminRoute><PaymentsHistory></PaymentsHistory></AdminRoute>
         },
         {
             path:'userMessage',

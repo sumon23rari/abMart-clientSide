@@ -88,12 +88,12 @@ const handleDelete=(uId)=>{
             </title>
           </Helmet>
           <SectionTitle subHeading={"users info"} heading={"showing all users "}></SectionTitle>
-            <div className='rounded drop-shadow-lg p-8 m-10 bg-white min-h-screen'>
-                <h3 className='font-bold text-xl uppercase'>total user: {users.length}</h3>
-                <div className="overflow-x-auto mt-4">
-  <table className="table">
+            <div className='rounded drop-shadow-lg md:p-8 overflow-x-hidden m-10 bg-white min-h-screen'>
+                <h3 className='font-bold text-xl text-center uppercase'>total user: {users.length}</h3>
+                <div className=" mt-4 !overflow-x-scroll">
+  <table className="table ">
     {/* head */}
-    <thead className='font-bold text-xl bg-gradient-to-r from-[#24D381] to-[#32EC95] text-white text-white rounded'>
+    <thead className='font-bold text-xl bg-gradient-to-r from-[#24D381] to-[#32EC95] text-white  rounded'>
       <tr>
         <th></th>
         <th>NAME</th>

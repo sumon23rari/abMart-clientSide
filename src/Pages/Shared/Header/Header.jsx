@@ -1,26 +1,28 @@
 import React, { useContext, useRef, useState } from 'react';
 import Htop from './Htop';
 import logo from '../../../assets/logo.png';
-import { FaBabyCarriage, FaBaseballBall, FaCamera, FaSearch,FaCameraRetro, FaFemale, FaHeadphones, FaShoppingBag, FaUser,FaBars,FaShoppingCart  } from "react-icons/fa";
+import { FaBabyCarriage, FaBaseballBall, FaCamera, FaSearch,FaCameraRetro, FaFemale, FaHeadphones, FaShoppingBag, FaUser,FaBars,FaShoppingCart, FaUsers, FaHome  } from "react-icons/fa";
 import { IoWatchOutline } from "react-icons/io5";
 import { BiShuffle } from 'react-icons/bi';
 import { IoPerson } from "react-icons/io5";
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProviders';
 import useAuth from '../../../hooks/useAuth';
+import { FaShop } from 'react-icons/fa6';
+import useAdmin from '../../../hooks/useAdmin';
 
 
 
 const Header = () => {
   // const {navOpen,setNavOpen}=useContext(AuthContext);
   const [navOpen,setNavOpen]=useState(false);
-  // const {theme,toggleTheme}=useContext(ThemeContext)
+ 
   const {user,logOut}=useAuth();
   console.log(user,'userInfo')
   const itemsRef=useRef();
   const hButtonRef=useRef();
-
+  const [isAdmin]=useAdmin()
   window.addEventListener("click",(e)=>{
     if(e.target!==itemsRef.current && e.target !==hButtonRef.current){
      
@@ -30,6 +32,19 @@ const Header = () => {
   const handleLogOut=()=>{
     logOut();
   }
+  const navOption=<>
+      <li className='capitalize font-bold text-xl'><NavLink to="/">home</NavLink></li>
+      <li className='capitalize font-bold text-xl'><NavLink to="/shops">shops</NavLink></li>
+      <li className='capitalize font-bold text-xl'><NavLink to="/logIn">seller logIn</NavLink></li>
+      
+      {
+        user && isAdmin && <li className='capitalize font-bold text-xl'><NavLink to="/dashboard/adminHome">Dashboard</NavLink></li>
+      }
+      {
+        user && !isAdmin && <li className='capitalize font-bold text-xl'><NavLink to="/dashboard/userHome">Dashboard</NavLink></li>
+      }
+      
+      </>
   console.log(user,'user')
     return (
         <>
@@ -74,9 +89,9 @@ const Header = () => {
   <input
     type="text"
     placeholder="Search here"
-    className="w-full px-4 py-2 text-sm text-gray-700 outline-none rounded-full"
+    className="w-full px-4 py-2 text-sm text-gray-700 outline-none outline-offset-0 rounded-full"
   />
-  <button className="p-[10px] bg-[#AFDFB4]">
+  <button className="p-[10px] bg-[#AFDFB4] rounded-r-full">
 
 <FaSearch className='text-white'/>
   </button>
@@ -93,16 +108,21 @@ const Header = () => {
       </div>
       </div>
       <div className='block md:hidden'>
-         <div className="flex items-center bg-[#039D55] p-3">
+         <div className="flex drawer items-center bg-[#039D55] p-3">
       {/* Menu Icon */}
      
 
       {/* Logo */}
    
       <span className="text-white font-bold text-xl">β</span>
-      <button className="text-white mx-3">
+      {/* <button className="text-white mx-3">
      <FaBars/>
-      </button>
+      </button> */}
+       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content mx-3 -mb-[5px] text-white mt-2s">
+          {/* Page content here */}
+          <label htmlFor="my-drawer" className=" drawer-button text-2xl"><FaBars></FaBars></label>
+        </div>
       {/* Search Bar */}
       <div className="flex items-center bg-white rounded-full mx-3 flex-grow">
         <input
@@ -142,6 +162,19 @@ const Header = () => {
           3
         </span>
       </div>
+       <div className="drawer-side z-50">
+          <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+          <ul className="menu text-base-content  min-h-full bg-[#039D55] w-2/3 p-4 py-6"htmlFor="my-drawer" aria-label="close sidebar">
+            {/* Sidebar content here */}
+            
+                   
+                          
+                       
+                          
+          {navOption}
+               
+          </ul>
+        </div>
     </div>
          </div>
       </>

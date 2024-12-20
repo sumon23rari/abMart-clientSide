@@ -73,7 +73,7 @@ const AddItems = () => {
             <title>addProducts</title>
           </Helmet>
 <SectionTitle subHeading={"what's add an new item"} heading={"Add An Items"}></SectionTitle>
-<div className='rounded drop-shadow-lg  p-8 m-10 bg-[#E8E8E8] min-h-screen'>
+<div className='rounded drop-shadow-lg  md:p-8 m-10 bg-[#E8E8E8] min-h-screen'>
             <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
               <div className="form-control mb-[25px]">
                 <label className="label">
@@ -82,7 +82,7 @@ const AddItems = () => {
                 <input type='text' placeholder='items name' name="productName" className='px-3 py-3 rounded' {...register("productName", { required: true })} />
                 {errors.name && <span className='text-red-400 '>productName is required</span>}
               </div>
-              <div className='flex justify-between gap-[26px] mb-[25px]'>
+              <div className='flex flex-col md:justify-between gap-[26px] mb-[25px]'>
               <div className="form-control w-full">
                 <label className="label">
                   <span className="label-text">Product Category</span>
@@ -106,7 +106,7 @@ const AddItems = () => {
                 {errors.productPrice && <span className='text-red-400 '>productPrice is required</span>}
               </div>
               </div>
-              <div className='flex justify-between gap-[26px] mb-[25px]'>
+              <div className='flex flex-col md:justify-between gap-[26px] mb-[25px]'>
               <div className="form-control w-full">
                 <label className="label">
                   <span className="label-text">productBrandName</span>

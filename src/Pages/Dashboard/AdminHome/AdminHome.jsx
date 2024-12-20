@@ -143,7 +143,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 
 </div>
 
-    <div className="w-full mt-[70px]">
+    <div className="w-full mt-[70px] overflow-x-scroll">
     
     <BarChart
       width={900}

@@ -45,9 +45,9 @@ const ManageProducts = () => {
             <title>ManageProducts</title>
           </Helmet>
           <SectionTitle subHeading={"hurry up"} heading={"manage all items"}></SectionTitle>
-             <div className='rounded drop-shadow-lg  p-8 m-10 bg-[#E8E8E8] min-h-screen'>
+             <div className='rounded drop-shadow-lg overflow-x-hidden md:p-8 m-10 bg-[#E8E8E8] min-h-screen'>
             <h3 className='uppercase font-bold text-xl py-3'>total products {products.length}</h3>
-<div className="overflow-x-auto">
+<div className="overflow-x-scroll">
   <table className="table">
     
     {/* head */}
